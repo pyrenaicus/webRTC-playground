@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>playing with webRTC</title>
+  </head>
+  <body>
+    <div>
+      <p>Your ID:</p>
+      <p id="id"></p>
+      <input type="text" placeholder="Peer id" />
+      <button onclick="startCall()">Call</button>
+    </div>
+
+    <div id="live">
+      <video id="remoteVideo"></video>
+      <p>remote video</p>
+      <video id="localVideo" muted></video>
+      <p>local video</p>
+      <button id="end-call" onclick="endCall()">End Call</button>
+    </div>
+
+    <div id="chat">
+      <div id="send">
+        <h2>Send</h2>
+        <textarea
+          id="dataToSend"
+          placeholder="Enter text, then click Send"
+        ></textarea>
+        <button id="sendBtn" onclick="sendData()">Send</button>
+      </div>
+      <div id="receive">
+        <h2>Receive</h2>
+        <textarea id="dataReceive" disabled></textarea>
+        <button id="receiveBtn" onclick="receiveData()">Receive</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

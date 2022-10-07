@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+  </head>
+  <body>
+    <h1>provant webRTC</h1>
+    <p id="peer1">peer1 ID:</p>
+    <p id="peer2">peer2 ID:</p>
+
+    <div>
+      <button id="callButton" onclick="startCall()">Trucar</button>
+      <button id="answerButton" onclick="answerCall()">Contestar</button>
+      <button id="hangupButton" onclick="endCall()">Hang Up</button>
+    </div>
+
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay muted></video>
+    <script src="main.js"></script>
+  </body>
+</html>
